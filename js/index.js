@@ -52,8 +52,8 @@ const createProduct = async (e) => {
     Toastify({
         text: "Producto agregado correctamente a la base de datos.",
         offset: {
-          x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-          y: 10 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+          x: 50, 
+          y: 10 
         }
       }).showToast();
 

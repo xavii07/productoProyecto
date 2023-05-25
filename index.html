@@ -15,6 +15,11 @@
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
     
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.2.6/dist/cdn/beer.min.css" rel="stylesheet">
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.2.6/dist/cdn/beer.min.js"></script>
+    
+    <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.1.7/dist/cdn/material-dynamic-colors.min.js"></script>
 </head>
 <body>
     <main>
@@ -22,35 +27,38 @@
         <form id="formulario" enctype="multipart/form-data">
             <div>
                 <label>Nombre: </label>
-                <input type="text" name="nombre"  pattern="[A-Za-z\s]+" title="Ingrese solo letras" id="nombre" required autocomplete="off">
+                <input placeholder="Coca Cola negra" type="text" name="nombre"  pattern="[A-Za-z\s]+" title="Ingrese solo letras" id="nombre" required autocomplete="off">
             </div>
             <div>
                 <label>Cantidad: </label>
-                <input type="number" name="cantidad" pattern="[0-9]+" title="Ingrese solo numeros" id="cantidad" required autocomplete="off">
+                <input placeholder="25" type="number" min="1" name="cantidad" pattern="[0-9]+" title="Ingrese solo numeros" id="cantidad" required autocomplete="off">
             </div>
             <div>
                 <label>Precio de venta: </label>
-                <input type="number" name="precioVenta" pattern="^\d+(\.\d{1,2})?$" title="Ingrese solo numeros" id="precioVenta" step="any" required autocomplete="off">
+                <input placeholder="0.95" type="number" min="0" name="precioVenta" pattern="^\d+(\.\d{1,2})?$" title="Ingrese solo numeros" id="precioVenta" step="any" required autocomplete="off">
             </div>
             <div>
                 <label>Precio de compra: </label>
-                <input type="number" id="precioCompra" pattern="^\d+(\.\d{1,2})?$"  title="Ingrese solo numeros" id="precioCompra" step="any" required autocomplete="off">
-            </div>
-            <div>
-                <label>Fecha de vencimiento: </label>
-                <input type="date" name="fechaVencimiento" id="fechaVencimiento">
+                <input placeholder="0.85" type="number" min="0" id="precioCompra" pattern="^\d+(\.\d{1,2})?$"  title="Ingrese solo numeros" id="precioCompra" step="any" required autocomplete="off">
             </div>
             <div>
                 <label>Categoria: </label>
-                <input type="text" name="categoria" pattern="[A-Za-z\s]+" title="Ingrese solo letras" id="categoria" required autocomplete="off">
+                <input placeholder="Bebidas" type="text" name="categoria" pattern="[A-Za-z\s]+" title="Ingrese solo letras" id="categoria" required autocomplete="off">
             </div>
             <div>
                 <label>Marca: </label>
-                <input type="text" name="marca"  pattern="[A-Za-z\s]+"  title="Ingrese solo letras" id="marca" required autocomplete="off">
+                <input placeholder="Coca Cola" type="text" name="marca"  pattern="[A-Za-z\s]+"  title="Ingrese solo letras" id="marca" required autocomplete="off">
             </div>
-            <div>
-                <label>Imagen: </label>
-                <input type="file" name="imagen" id="imagen" accept="image/png, im  age/gif, image/jpeg, image/jpg" required>
+            <div class="field label prefix border small">
+                <i>today</i>
+                <label class="active label">Fecha de vencimiento: </label>
+                <input type="date" name="fechaVencimiento" id="fechaVencimiento">
+            </div>
+            <div class="field label prefix border">
+                <i>attach_file</i>
+                <input type="text">
+                <input type="file" name="imagen" id="imagen" accept="image/png, image/gif, image/jpeg, image/jpg" required>
+                <label class="label">Seleccione una imagen </label>
             </div>
             <div>
                 <input type="submit" value="Guardar Producto">

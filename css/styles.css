@@ -1,42 +1,98 @@
 body {
-    font-family: 'JetBrains Mono', monospace;
-    background-color: #f2f2f2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    width: 100vw;
-    overflow: hidden; }
-  h1 {
-    text-align: center;
-    text-transform: uppercase;}
+  font-family: 'JetBrains Mono', monospace !important;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center !important;
+  text-transform: uppercase;
+  font-size: 2rem !important;
+  display: block !important;
+  margin: 0  !important;
+}
+
+main {
+  width: 60%;
+}
+
+form {
+  background-color: #fff;
+  padding: 4rem 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1.5rem;
+  column-gap: 4rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #444;
+}
+
+input,
+select {
+  width: 100%;
+  height: 2.5rem;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #79747E;
+}
+
+input[type="submit"] {
+  background-color: #FFFD00;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+input[type="submit"]:hover {
+  background-color: #ffff00b9;
+}
+
+i {
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    width: 80%;
+  }
+}
+
+.label {
+  font-size: 0.7rem !important;
+}
+
+@media screen and (max-width: 768px) {
   form {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px; }
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-size: 0.8rem;
-    color: #444;}
-  input,
-  select {
-    width: 95%;
-    padding: 8px;
-    border-radius: 3px;
-    border: 1px solid #ccc; }
-  input[type="submit"] {
-    background-color: #FFFD00;
-    color: #000;
-    font-weight: bold;
-    width: 100%;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s; }
-  input[type="submit"]:hover {
-    background-color: #ffff00b9;}
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    row-gap: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem !important;}
+
+  main {
+    width: 90%;
+  }
+}
+
+.field {
+  height: 2.5rem !important;
+}
