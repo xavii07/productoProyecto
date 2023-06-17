@@ -1,8 +1,8 @@
 
 const formulario = document.getElementById('formulario');
-const supabaseUrl = "https://zqntnjnwhjchamppgacx.supabase.co";
+const supabaseUrl = "https://sdf.supse.co";
 const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpxbnRuam53aGpjaGFtcHBnYWN4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQwODY5MjksImV4cCI6MTk5OTY2MjkyOX0.waaqWMcoIkO_3ez63da9wEzehQrFFch5W2kbHdZUfOw";
+  "eyJhbGciOiODY5MjksImV4cCI6MTk5OTY2MjkyOX0.waaqWMcoIkO_3ez63da9wEzehQrFFch5W2kbHdZUfOw";
 
 const database = supabase.createClient(supabaseUrl, supabaseKey);
 
